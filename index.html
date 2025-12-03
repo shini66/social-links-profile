@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <title>Frontend Mentor | Social links profile</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lime-green': 'hsl(75, 94%, 57%)',
+                        'white': 'hsl(0, 0%, 100%)',
+                        'grey-600': 'hsl(0, 0%, 49%)',
+                        'grey-700': 'hsl(0, 0%, 20%)',
+                        'grey-800': 'hsl(0, 0%, 12%)',
+                        'grey-900': 'hsl(0, 0%, 8%)',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .button {
+                @apply bg-grey-700 rounded-md hover:bg-slate-900 p-4  text-base font-bold text-grey-600 hover:text-lime-green;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="bg-grey-900 h-screen w-full flex flex-col justify-center items-center p-4">
+    <div class="bg-grey-800 w-full max-w-lg sm:w-1/2 mx-auto rounded-3xl text-center m-4 p-6">
+        <div>
+            <img src="./assets/images/avatar-jessica.jpeg" alt="Jessica Randall" class="mx-auto rounded-xl w-32 h-32 mb-4 hover:scale-[1.30] transition-all ease-in-out duration-600">
+            <h1 class=" text-4xl font-bold text-white">Jessica Randall</h1>
+            <p class=" text-base font-bold text-lime-green">London, United Kingdom</p>
+            <p class=" text-base font-bold text-grey-600 mt-4">"Front-end developer and avid reader."</p>
+        </div>
+        <div class="mt-8 flex flex-col space-y-4">
+            <a id="GitHub" href="#" class="button hover:scale-105 hover:shadow-md hover:shadow-lime-400 transition-all duration-200">GitHub</a>
+            <a id="FrontendMentor" href="#" class="button hover:scale-105 hover:shadow-md hover:shadow-lime-400 transition-all duration-200">Frontend Mentor</a>
+            <a id="LinkedIn" href="#" class="button hover:scale-105 hover:shadow-md hover:shadow-lime-400 transition-all duration-200">LinkedIn</a>
+            <a id="Twitter" href="#" class="button hover:scale-105 hover:shadow-md hover:shadow-lime-400 transition-all duration-200">Twitter</a>
+            <a id="Instagram" href="#" class="button hover:scale-105 hover:shadow-md hover:shadow-lime-400 transition-all duration-200">Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        var git = document.getElementById("GitHub")
+        var front = document.getElementById("FrontendMentor")
+        var linked = document.getElementById("LinkedIn")
+        var twitter = document.getElementById("Twitter")
+        var instagram = document.getElementById("Instagram")
+
+        git.onclick = function () {
+            alert("GitHub profile is currently unavailable.");
+        }
+
+        front.onclick = function () {
+            window.open("https://www.frontendmentor.io/profile/jessicard", "_blank");
+        }
+
+        linked.onclick = function () {
+            window.open("https://www.linkedin.com/in/jessicard", "_blank");
+        }
+
+        twitter.onclick = function () {
+            window.open("https://twitter.com/jessicard", "_blank");
+        }
+
+        instagram.onclick = function () {
+            window.open("https://www.instagram.com/jessicard", "_blank");
+        }
+
+    </script>
+</body>
+</html>
